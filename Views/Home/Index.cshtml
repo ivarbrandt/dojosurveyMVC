@@ -1,0 +1,37 @@
+﻿@model Survey
+
+<div class="text-center">
+    <div class="justify-content-start">
+        <form
+          asp-action="Create"
+          asp-controller="Home"
+          class="form-group"
+          method="post"
+        >
+          <span asp-validation-for="Name"></span>
+          <h4>Your Name: <input class="form-control" asp-for="Name" /></h4>
+          <h4>
+            <span asp-validation-for="Location"></span>
+            Dojo Location:<select class="form-control" asp-for="Location">
+              <option value="Boise">Boise</option>
+              <option value="Los Angeles">Los Angeles</option>
+              <option value="Chicago">Chicago</option></select>
+            >
+          </h4>
+          <h4>
+            <span asp-validation-for="Language"></span>
+            Favorite Language:<select class="form-control" asp-for="Language">
+              <option value="Python">Python</option>
+              <option value="C#">C#</option>
+              <option value="JavaScript">JavaScript</option></select>
+            >
+          </h4>
+          <span asp-validation-for="Comment"></span>
+          <h4>Comment (optional):</h4>
+          <input class="form-control" asp-for="Comment" />
+          <button class="btn btn-primary" type="Submit" style="margin-top: 7px">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
